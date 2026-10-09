@@ -124,13 +124,14 @@ footer{border-top:1px solid var(--line);background:#fff;padding:30px 28px 18px}
 .hero h1{font-size:clamp(30px,8.5vw,40px)}
 .hero p{font-size:15.5px;margin:10px 0 16px}
 .hero-btns .btn{flex:1 1 100%}
-.hero-stats{gap:14px 22px;margin-top:18px}
+.hero-stats{gap:12px;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;text-align:left}
+.hero-stats b{font-size:20px}
+.hero-stats>div{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 14px}
 .main-img{height:300px;border-width:4px;border-radius:20px}
 .hero-collage{margin:0 4px}
-.sub-img{width:92px;height:92px;border-radius:16px}
-.s1{right:8px;top:-10px}.s2{left:8px;bottom:70px}
+.sub-img{display:none}
+.float-mini{display:none}
 .float-price{padding:10px 14px;left:10px;bottom:10px}.float-price b{font-size:17px}
-.float-mini{font-size:11px;padding:6px 10px}
 .f1{top:10px;left:10px}.f2{bottom:10px;right:10px}
 .marquee{margin:20px -16px 0}
 .cats{margin:16px auto 0;padding:0 16px 10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -140,12 +141,12 @@ footer{border-top:1px solid var(--line);background:#fff;padding:30px 28px 18px}
 .filters{width:100%}.filters select{flex:1;min-width:0;font-size:14px}
 .grid{padding:0 16px;grid-template-columns:repeat(2,1fr);gap:12px}
 .card{border-radius:16px}
-.card-img img{height:170px}
-.card-body{padding:10px 12px 12px;gap:6px}.card-body h3{font-size:13.5px}
+.card-img img{height:190px}
+.card-body{padding:12px 12px 14px;gap:7px}.card-body h3{font-size:14px;line-height:1.4}
 .card-body .catlabel{font-size:10px}
 .rate{font-size:12px}
-.price{flex-wrap:wrap;gap:4px 8px}.price b{font-size:16px}.price s{font-size:11px}
-.card-btns .btn{padding:10px 4px;font-size:12.5px}
+.price{flex-wrap:wrap;gap:4px 8px}.price b{font-size:17px}.price s{font-size:12px}
+.card-btns .btn{padding:11px 4px;font-size:13px}
 .features{padding:0 16px}.feat{padding:18px}
 .promo-banner{margin:18px 16px;padding:20px}
 .promo-banner h2{font-size:22px}
