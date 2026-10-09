@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUNA Toshkent — Ayollar uchun taqinchoq, soat va aksessuarlar 💖</title>
+<meta name="description" content="LUNA Toshkent — qizlar va ayollar uchun taqinchoqlar, uzuk, zirak, marjon, ayollar soatlari, sumkalar. Instagram: @uzwatch_toshkent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">💖 Toshkent bo'ylab 24 soatda yetkazib berish • Barcha taqinchoqlarga sovg'a qutisi BEPUL • <a href="https://www.instagram.com/uzwatch_toshkent/" target="_blank">@uzwatch_toshkent</a></div>
+
+<header class="header">
+  <a class="logo" href="#home">LUNA<small>TOSHKENT • for girls</small></a>
+  <nav class="nav">
+    <a href="#home">Bosh sahifa</a>
+    <a href="#katalog">Katalog</a>
+    <a href="#afzallik">Nega biz?</a>
+    <a href="#sharxlar">Qizlar fikri</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <div class="header-actions">
+    <div class="searchbox"><input id="searchInput" type="search" placeholder="Qidirish: uzuk, marjon, soat..."></div>
+    <button class="icon-btn" id="favBtn" title="Sevimlilar">♡ <span id="favCount">0</span></button>
+    <button class="icon-btn cart-btn" id="cartBtn" title="Savatcha">🛍 <span id="cartCount">0</span></button>
+    <a class="btn btn-pink btn-sm" href="https://www.instagram.com/uzwatch_toshkent/" target="_blank">Instagram</a>
+  </div>
+  <button class="burger" id="burger">☰</button>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home">Bosh sahifa</a><a href="#katalog">Katalog</a><a href="#afzallik">Nega biz?</a><a href="#sharxlar">Qizlar fikri</a><a href="#kontakt">Kontakt</a>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="badge">✨ 5000+ baxtli qizlar • Toshkentda 2020-yildan beri</div>
+      <h1>Seni yanada <span>go'zal</span> qiladigan taqinchoqlar</h1>
+      <p>Ayollar soatlari, uzuklar, ziraklar, marjonlar, bilaguzuklar va mini sumkalar. Allergiya qilmaydigan, qoraymaydigan sifat — sovg'a qutisida, arzon narxda.</p>
+      <div class="hero-btns">
+        <a href="#katalog" class="btn btn-pink">💖 Katalogni ko'rish</a>
+        <a href="https://t.me/uzwatch_toshkent" target="_blank" class="btn btn-ghost">✈️ Telegramda buyurtma</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>5000+</b><span>mamnun mijoz</span></div>
+        <div><b>400+</b><span>taqinchoq modeli</span></div>
+        <div><b>7 kun</b><span>almashtirish</span></div>
+        <div><b>4.9★</b><span>reyting</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-collage">
+        <img class="main-img" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80&auto=format&fit=crop" alt="Taqinchoq">
+        <img class="sub-img s1" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&q=80&auto=format&fit=crop" alt="Ayollar soati">
+        <img class="sub-img s2" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&q=80&auto=format&fit=crop" alt="Sumka">
+        <div class="float-price"><s>650 000 so'm</s><b>399 000 so'm</b><span>-38% CHEGIRMA</span></div>
+        <div class="float-mini f1">💝 Sovg'a qutisi bepul</div>
+        <div class="float-mini f2">✨ Qoraymaydi</div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee"><div class="marquee-track">
+    <span>UZUKLAR 💍</span><span>ZIRAKLAR ✨</span><span>MARJONLAR 📿</span><span>BILAGUZUKLAR 💫</span><span>AYOLLAR SOATLARI ⌚</span><span>MINI SUMKALAR 👜</span><span>SOVG'A TOPLAMLAR 🎁</span>
+  </div></div>
+</section>
+
+<section class="cats">
+  <button class="cat active" data-cat="all">Barchasi 💖</button>
+  <button class="cat" data-cat="soat">Soatlar ⌚</button>
+  <button class="cat" data-cat="uzuk">Uzuklar 💍</button>
+  <button class="cat" data-cat="zirak">Ziraklar ✨</button>
+  <button class="cat" data-cat="marjon">Marjonlar 📿</button>
+  <button class="cat" data-cat="bilaguzuk">Bilaguzuklar 💫</button>
+  <button class="cat" data-cat="sumka">Sumkalar 👜</button>
+  <button class="cat" data-cat="sovga">Sovg'a setlar 🎁</button>
+</section>
+
+<section class="toolbar" id="katalog">
+  <div>
+    <h2>Katalog <small id="countLabel"></small></h2>
+    <p class="muted">Instagram @uzwatch_toshkent dagi eng sevilgan modellar — shu yerda buyurtma bering 💌</p>
+  </div>
+  <div class="filters">
+    <select id="sortSelect">
+      <option value="pop">Mashhurligi bo'yicha</option>
+      <option value="cheap">Arzondan qimmatga</option>
+      <option value="exp">Qimmatdan arzonga</option>
+      <option value="new">Yangi kelganlar</option>
+    </select>
+    <select id="priceSelect">
+      <option value="all">Barcha narxlar</option>
+      <option value="0-150">150 minggacha</option>
+      <option value="150-300">150 — 300 ming</option>
+      <option value="300-600">300 — 600 ming</option>
+      <option value="600-9999">600 ming+</option>
+    </select>
+  </div>
+</section>
+
+<main class="grid" id="productGrid"></main>
+
+<section class="features" id="afzallik">
+  <div class="feat"><div class="fi">💝</div><h3>Sovg'a qutisi bepul</h3><p>Har bir taqinchoq atirgul quticha + tabrik otkritkasi bilan. Sovg'aga tayyor.</p></div>
+  <div class="feat"><div class="fi">✨</div><h3>Qoraymaydi</h3><p>Zanglamas po'lat, 18K oltin suvi. Allergiya qilmaydi, suvda o'chmaydi.</p></div>
+  <div class="feat"><div class="fi">🚚</div><h3>Tez yetkazib berish</h3><p>Toshkent bo'ylab 24 soatda, O'zbekiston bo'ylab 2-3 kunda. 400 ming+ ga bepul.</p></div>
+  <div class="feat"><div class="fi">🔄</div><h3>7 kun almashtirish</h3><p>O'lcham to'g'ri kelmasa yoki yoqmasa — savolsiz almashtiramiz.</p></div>
+</section>
+
+<section class="promo-banner">
+  <div><h2>2 ta olsangiz — 3-chisiga <span>-20%</span> 💖</h2><p>Dugonangiz bilan birga oling! Promokod: <b id="promoCode">LUNA20</b> <button class="btn btn-sm" id="copyPromo">Nusxalash</button></p></div>
+  <a href="#katalog" class="btn btn-pink">Hozir tanlash 💌</a>
+</section>
+
+<section class="reviews" id="sharxlar">
+  <h2>Qizlarimiz nima deydi? 💬</h2>
+  <div class="rev-grid">
+    <div class="rev"><div class="stars">★★★★★</div><p>"Marvarid zirak oldim, juda chiroyli chiqdi, qutisi ham super. Dugonalarim ham so'rashdi!"</p><b>— Sevara, Yunusobod 💖</b></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Singlimga sovg'a set oldim, otkritka yozib berishdi. Yig'lab yubordi xursandligidan 🥹"</p><b>— Diyora, Chilonzor 🎁</b></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Uzuk o'lchami to'g'ri kelmadi, 1 kunda almashtirib berishdi. Servis 10/10"</p><b>— Madina, Mirzo Ulug'bek ✨</b></div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="contact-card">
+    <h2>Buyurtma berish — 2 daqiqada 💌</h2>
+    <p>1. Yoqqanini savatchaga qo'shing → 2. Ism + telefon yozing → 3. Telegramga yuboriladi, biz sizga yozamiz.</p>
+    <ul class="contact-list">
+      <li>📍 Toshkent sh., Chilonzor, Qatortol bozori, 12-do'kon</li>
+      <li>📞 <a href="tel:+998973385555">+998 97 338 55 55</a> (9:00 – 22:00)</li>
+      <li>✈️ Telegram: <a href="https://t.me/uzwatch_toshkent" target="_blank">@uzwatch_toshkent</a></li>
+      <li>📸 Instagram: <a href="https://www.instagram.com/uzwatch_toshkent/" target="_blank">@uzwatch_toshkent</a></li>
+    </ul>
+  </div>
+  <form class="order-form" id="quickOrder">
+    <h3>Tezkor buyurtma 💖</h3>
+    <input required id="qName" placeholder="Ismingiz (masalan: Sevara)" minlength="2">
+    <input required id="qPhone" placeholder="Telefon: +998 __ ___ __ __" inputmode="tel">
+    <select id="qPay"><option>Naqd</option><option>Click</option><option>Payme</option><option>Uzum Bank</option></select>
+    <button class="btn btn-pink" type="submit">Telegram orqali yuborish ✈️</button>
+    <small>Ma'lumotlaringiz sir saqlanadi 🤍</small>
+  </form>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><div class="logo">LUNA</div><p>Qizlar va ayollar uchun taqinchoq va aksessuarlar do'koni. Go'zallik mayda detallarda 💖</p></div>
+    <div><b>Menyu</b><a href="#katalog">Katalog</a><a href="#afzallik">Yetkazib berish</a><a href="#kontakt">Kontakt</a></div>
+    <div><b>Ijtimoiy</b><a href="https://www.instagram.com/uzwatch_toshkent/" target="_blank">Instagram</a><a href="https://t.me/uzwatch_toshkent" target="_blank">Telegram kanal</a><a href="https://t.me/uzwatch_toshkent" target="_blank">Telegram admin</a></div>
+    <div><b>Kontakt</b><span>+998 97 338 55 55</span><span>Toshkent, Chilonzor</span><span>9:00 – 22:00, damsiz</span></div>
+  </div>
+  <div class="copy">© 2026 LUNA Toshkent 💖 • Barcha huquqlar himoyalangan</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head"><h3>🛍 Savatcha <span id="drawerCount"></span></h3><button id="closeCart">✕</button></div>
+  <div class="drawer-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="promo-row"><input id="promoInput" placeholder="Promokod (masalan LUNA20)"><button id="applyPromo">OK</button></div>
+    <div class="total-row"><span>Jami:</span><b id="cartTotal">0 so'm</b></div>
+    <div class="muted small" id="discountLabel"></div>
+    <input id="cName" placeholder="Ismingiz">
+    <input id="cPhone" placeholder="+998 __ ___ __ __">
+    <textarea id="cAddr" rows="2" placeholder="Manzil: tuman, ko'cha, uy..."></textarea>
+    <button class="btn btn-pink full" id="checkoutBtn">✈️ Telegram orqali buyurtma berish</button>
+    <button class="btn btn-ghost full" id="clearCart">Savatchani tozalash</button>
+  </div>
+</aside>
+
+<div class="modal" id="pModal"><div class="modal-card">
+  <button class="modal-x" id="closeModal">✕</button>
+  <img id="mImg" src="" alt="">
+  <div class="modal-info"><div class="badge" id="mBadge"></div><h2 id="mName"></h2><div class="stars">★★★★★ <span id="mRating"></span></div>
+  <p id="mDesc"></p><ul id="mSpecs"></ul>
+  <div class="m-price"><s id="mOld"></s><b id="mPrice"></b></div>
+  <div class="m-btns"><button class="btn btn-pink" id="mAdd">Savatchaga qo'shish 🛍</button><a class="btn btn-ghost" id="mOrder" target="_blank">Telegramda so'rash ✈️</a></div>
+  </div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+<a class="tg-float" href="https://t.me/uzwatch_toshkent" target="_blank">✈️</a>
+
+<script src="app.js"></script>
+</body>
+</html>
