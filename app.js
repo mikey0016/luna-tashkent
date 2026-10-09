@@ -80,6 +80,8 @@ function renderCart(){
   const n = cart.reduce((s,i)=>s+i.qty,0);
   $('cartCount').textContent=n; $('drawerCount').textContent=n?`(${n})`:'';
   $('favCount').textContent=favs.length;
+  if($('mCartCount')) $('mCartCount').textContent=n;
+  if($('mFavCount')) $('mFavCount').textContent=favs.length;
   const box=$('cartItems');
   if(!cart.length){ box.innerHTML=`<div class="empty">Savatcha bo'sh 🛍<br><br><a href="#katalog" class="btn btn-pink" onclick="closeCartFn()">Xaridni boshlash 💖</a></div>`; }
   else box.innerHTML=cart.map(i=>{ const p=PRODUCTS.find(x=>x.id===i.id); return `
@@ -98,6 +100,8 @@ function openCart(){ $('cartDrawer').classList.add('open'); $('overlay').classLi
 function closeCartFn(){ $('cartDrawer').classList.remove('open'); $('overlay').classList.remove('show'); }
 window.closeCartFn=closeCartFn;
 $('cartBtn').onclick=openCart; $('closeCart').onclick=closeCartFn; $('overlay').onclick=()=>{closeCartFn(); closeModal();};
+if($('mCartBtn')) $('mCartBtn').onclick=openCart;
+if($('mFavBtn')) $('mFavBtn').onclick=()=>$('favBtn').click();
 
 $('applyPromo').onclick=()=>{ const v=$('promoInput').value.trim().toUpperCase(); if(v==='LUNA20'||v==='UZWATCH20'){ promoApplied=true; toast('Promokod qo‘llandi −20% 🎉'); } else toast('Promokod noto‘g‘ri ❌'); renderCart(); };
 $('copyPromo').onclick=()=>{ navigator.clipboard?.writeText('LUNA20'); if($('promoInput')) $('promoInput').value='LUNA20'; toast('Promokod nusxalandi ✅'); };
