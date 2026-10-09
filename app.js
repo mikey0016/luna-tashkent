@@ -104,7 +104,7 @@ if($('mCartBtn')) $('mCartBtn').onclick=openCart;
 if($('mFavBtn')) $('mFavBtn').onclick=()=>$('favBtn').click();
 
 $('applyPromo').onclick=()=>{ const v=$('promoInput').value.trim().toUpperCase(); if(v==='LUNA20'||v==='UZWATCH20'){ promoApplied=true; toast('Promokod qo‘llandi −20% 🎉'); } else toast('Promokod noto‘g‘ri ❌'); renderCart(); };
-$('copyPromo').onclick=()=>{ navigator.clipboard?.writeText('LUNA20'); if($('promoInput')) $('promoInput').value='LUNA20'; toast('Promokod nusxalandi ✅'); };
+$('copyPromo').onclick=()=>{ if(navigator.clipboard&&navigator.clipboard.writeText){ try{ navigator.clipboard.writeText('LUNA20'); }catch(e){} } if($('promoInput')) $('promoInput').value='LUNA20'; toast('Promokod nusxalandi ✅'); };
 $('clearCart').onclick=()=>{ cart=[]; promoApplied=false; save(); };
 
 let modalId=null;
