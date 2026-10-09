@@ -1,4 +1,4 @@
-// LUNA Toshkent — ayollar shop logic 💖
+// Uz Watch Toshkent — ayollar shop logic 💖
 const TELEGRAM_USERNAME = "uzwatch_toshkent";
 const INSTAGRAM_URL = "https://www.instagram.com/uzwatch_toshkent/";
 
@@ -91,7 +91,7 @@ function renderCart(){
   let sum=cartSum(), disc=0;
   if(promoApplied){ disc=Math.round(sum*0.2); }
   $('cartTotal').textContent=fmt(sum-disc);
-  $('discountLabel').textContent = promoApplied?`Chegirma LUNA20: −${fmt(disc)} ✅`:'';
+  $('discountLabel').textContent = promoApplied?`Chegirma UZWATCH20: −${fmt(disc)} ✅`:'';
 }
 window.chQty=(id,d)=>{ const it=cart.find(i=>i.id===id); it.qty+=d; if(it.qty<=0) cart=cart.filter(i=>i.id!==id); save(); };
 window.rmItem=id=>{ cart=cart.filter(i=>i.id!==id); save(); };
@@ -104,7 +104,7 @@ if($('mCartBtn')) $('mCartBtn').onclick=openCart;
 if($('mFavBtn')) $('mFavBtn').onclick=()=>$('favBtn').click();
 
 $('applyPromo').onclick=()=>{ const v=$('promoInput').value.trim().toUpperCase(); if(v==='LUNA20'||v==='UZWATCH20'){ promoApplied=true; toast('Promokod qo‘llandi −20% 🎉'); } else toast('Promokod noto‘g‘ri ❌'); renderCart(); };
-$('copyPromo').onclick=()=>{ if(navigator.clipboard&&navigator.clipboard.writeText){ try{ navigator.clipboard.writeText('LUNA20'); }catch(e){} } if($('promoInput')) $('promoInput').value='LUNA20'; toast('Promokod nusxalandi ✅'); };
+$('copyPromo').onclick=()=>{ if(navigator.clipboard&&navigator.clipboard.writeText){ try{ navigator.clipboard.writeText('UZWATCH20'); }catch(e){} } if($('promoInput')) $('promoInput').value='UZWATCH20'; toast('Promokod nusxalandi ✅'); };
 $('clearCart').onclick=()=>{ cart=[]; promoApplied=false; save(); };
 
 let modalId=null;
@@ -128,7 +128,7 @@ document.querySelectorAll('#mobileNav a').forEach(a=>a.onclick=()=>$('mobileNav'
 function sendToTelegram(name,phone,extra){
   const items = cart.map(i=>{ const p=PRODUCTS.find(x=>x.id===i.id); return `• ${p.name} x${i.qty} — ${fmt(p.price*i.qty)}`; }).join('\n') || 'Tezkor buyurtma (katalogdan tanlanmagan)';
   const sum = cart.length? `\nJami: ${$('cartTotal').textContent}` : '';
-  const msg = `💖 YANGI BUYURTMA — LUNA\n👤 Ism: ${name}\n📞 Tel: ${phone}\n${extra?`📍 ${extra}\n`:''}${items}${sum}\n\nManba: sayt (instagram: @uzwatch_toshkent)`;
+  const msg = `💖 YANGI BUYURTMA — UZ WATCH\n👤 Ism: ${name}\n📞 Tel: ${phone}\n${extra?`📍 ${extra}\n`:''}${items}${sum}\n\nManba: sayt (instagram: @uzwatch_toshkent)`;
   window.open(`https://t.me/${TELEGRAM_USERNAME}?text=${encodeURIComponent(msg)}`,'_blank');
   toast('Buyurtma Telegramga yuborildi ✈️');
 }
